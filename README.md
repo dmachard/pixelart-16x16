@@ -34,7 +34,7 @@ The project includes both the **firmware** for the ESP32-C3 and a **web app** fo
 ## Firmware (ESP32-C3 + WS2812B)
 
 Firmware for controlling a 16×16 WS2812B LED matrix using an ESP32-C3 via **Bluetooth Low Energy (BLE)**.  
-Designed to work with the [PixelArtMatrix Web App](../web/), which lets you draw and upload pixel art or animations wirelessly.
+Designed to work with the **Web Control App**, which lets you draw and upload pixel art or animations wirelessly.
 
 **Advertised Bluetooth device name:** `Matrix16x16`
 
