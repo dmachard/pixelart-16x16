@@ -68,6 +68,7 @@ The project includes both the **firmware** for the ESP32-C3 and a **web app** fo
 - **ESP32-C3**:  Microcontroller (BLE + WiFi)
 - **LED Matrix 16×16**: WS2812B (256 addressable RGB LEDs)
 - **Power Supply**:  5 V DC, ≥ 3 A recommended
+- **3D Printed Enclosure**: STL and FreeCAD files included in `/enclosure/`
 
 **Pinout:**
 | Signal | ESP32-C3 Pin | Notes |
@@ -90,10 +91,9 @@ The Webapp uses the Web Bluetooth API to send data directly to your ESP32-C3.
 <img src="imgs/webapp.png" width="500" title="alien">
 
 This web interface lets you:
-- Draw and color pixel art in real-time  
+- Draw and color pixel art with instant LED feedback
 - Control brightness  
 - Save/load drawings as `.json` files  
-- Upload drawings to the ESP32 matrix  
 - Play animated slideshows
 
 Each drawing must be stored as a `.json` file in the `/drawings/` directory.  
