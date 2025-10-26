@@ -59,3 +59,24 @@ cd web/
 source venv/bin/activate
 python scripts/json_to_png.py drawings/example.json
 ```
+
+
+## What's Icon Available so far?
+
+
+<table>
+
+<tr>
+<td><img src="web/images/alien.png" width="100" title="alien"></td>
+<td><img src="web/images/bear.png" width="100" title="bear"></td>
+<td><img src="web/images/bird.png" width="100" title="bird"></td>
+<td><img src="web/images/boot.png" width="100" title="bot"></td>
+</tr>
+
+<tr>
+<td><img src="web/images/buzz.png" width="100" title="buzz"></td>
+<td><img src="web/images/cat1.png" width="100" title="cat1"></td>
+<td><img src="web/images/cat2.png" width="100" title="cat2"></td>
+<td><img src="web/images/cat3.png" width="100" title="cat3"></td>
+</tr>
+</table>
