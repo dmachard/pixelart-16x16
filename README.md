@@ -1,9 +1,9 @@
 # pixelart-16x16
 
-> A Bluetooth-controlled 16×16 LED matrix powered by ESP32-C3 and WS2812B LEDs.
+Paint pixels in your browser and watch them **instantly** light up on your 
+physical LED matrix using **Bluetooth**.  
 
-Draw colorful pixel art directly in your web browser and send it wirelessly to your LED matrix using **Web Bluetooth**.  
-The project includes both the **firmware** for the ESP32-C3 and a **web app** for creation, upload, and slideshow control.
+The project includes both the **firmware** for the ESP32-C3 and a **web app** for drawing, upload, and slideshow control.
 
 <table>
 
