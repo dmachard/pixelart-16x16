@@ -67,16 +67,25 @@ python scripts/json_to_png.py drawings/example.json
 <table>
 
 <tr>
-<td><img src="web/images/alien.png" width="100" title="alien"></td>
-<td><img src="web/images/bear.png" width="100" title="bear"></td>
-<td><img src="web/images/bird.png" width="100" title="bird"></td>
-<td><img src="web/images/boot.png" width="100" title="bot"></td>
+<td><img src="web/images/alien.png" width="50" title="alien"></td>
+<td><img src="web/images/bear.png" width="50" title="bear"></td>
+<td><img src="web/images/bird.png" width="50" title="bird"></td>
+<td><img src="web/images/bot.png" width="50" title="bot"></td>
+<td><img src="web/images/buzz.png" width="50" title="buzz"></td>
+<td><img src="web/images/cat1.png" width="50" title="cat1"></td>
+<td><img src="web/images/cat2.png" width="50" title="cat2"></td>
+<td><img src="web/images/cat3.png" width="50" title="cat3"></td>
 </tr>
 
 <tr>
-<td><img src="web/images/buzz.png" width="100" title="buzz"></td>
-<td><img src="web/images/cat1.png" width="100" title="cat1"></td>
-<td><img src="web/images/cat2.png" width="100" title="cat2"></td>
-<td><img src="web/images/cat3.png" width="100" title="cat3"></td>
+<td><img src="web/images/chicken.png" width="50" title="chicken"></td>
+<td><img src="web/images/city.png" width="50" title="city"></td>
+<td><img src="web/images/face1.png" width="50" title="face1"></td>
+<td><img src="web/images/face2.png" width="50" title="face2"></td>
+<td><img src="web/images/face2.png" width="50" title="face2"></td>
+<td><img src="web/images/face3.png" width="50" title="face3"></td>
+<td><img src="web/images/fox1.png" width="50" title="fox1"></td>
+<td><img src="web/images/fox2.png" width="50" title="fox2"></td>
 </tr>
+
 </table>
