@@ -5,8 +5,6 @@
 Draw colorful pixel art directly in your web browser and send it wirelessly to your LED matrix using **Web Bluetooth**.  
 The project includes both the **firmware** for the ESP32-C3 and a **web app** for creation, upload, and slideshow control.
 
-## What's Icon Available so far?
-
 <table>
 
 <tr>
@@ -67,11 +65,9 @@ The project includes both the **firmware** for the ESP32-C3 and a **web app** fo
 
 ## Hardware setup
 
-| Component | Description |
-|------------|-------------|
-| **ESP32-C3** | Microcontroller (BLE + WiFi) |
-| **LED Matrix 16×16** | WS2812B (256 addressable RGB LEDs) |
-| **Power Supply** | 5 V DC, ≥ 3 A recommended |
+- **ESP32-C3**:  Microcontroller (BLE + WiFi)
+- **LED Matrix 16×16**: WS2812B (256 addressable RGB LEDs)
+- **Power Supply**:  5 V DC, ≥ 3 A recommended
 
 **Pinout:**
 | Signal | ESP32-C3 Pin | Notes |
@@ -91,7 +87,7 @@ Designed to work with the **Web Control App**, which lets you draw and upload pi
 
 The Webapp uses the Web Bluetooth API to send data directly to your ESP32-C3.
 
-<img src="imgs/webapp.png" width="300" title="alien">
+<img src="imgs/webapp.png" width="500" title="alien">
 
 This web interface lets you:
 - Draw and color pixel art in real-time  
