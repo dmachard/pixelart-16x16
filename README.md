@@ -82,7 +82,6 @@ python scripts/json_to_png.py drawings/example.json
 <td><img src="web/images/city.png" width="50" title="city"></td>
 <td><img src="web/images/face1.png" width="50" title="face1"></td>
 <td><img src="web/images/face2.png" width="50" title="face2"></td>
-<td><img src="web/images/face2.png" width="50" title="face2"></td>
 <td><img src="web/images/face3.png" width="50" title="face3"></td>
 <td><img src="web/images/fox1.png" width="50" title="fox1"></td>
 <td><img src="web/images/fox2.png" width="50" title="fox2"></td>
@@ -103,7 +102,7 @@ python scripts/json_to_png.py drawings/example.json
 <td><img src="web/images/mario.png" width="50" title="mario"></td>
 <td><img src="web/images/minion.png" width="50" title="minion"></td>
 <td><img src="web/images/pacman.png" width="50" title="pacman"></td>
-<td><img src="web/images/handpinkflamingo.png" width="50" title="handpinkflamingo"></td>
+<td><img src="web/images/pinkflamingo.png" width="50" title="pinkflamingo"></td>
 <td><img src="web/images/pockemon.png" width="50" title="pockemon"></td>
 <td><img src="web/images/pumpkin.png" width="50" title="pumpkin"></td>
 <td><img src="web/images/question.png" width="50" title="question"></td>
