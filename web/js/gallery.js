@@ -39,6 +39,14 @@ const galleryData = [
     { name: "Skull", thumb: "images/skull.png", file: "drawings/skull.json" },
     { name: "Chicken", thumb: "images/chicken.png", file: "drawings/chicken.json" },
     { name: "Hello Kitty", thumb: "images/hellokitty.png", file: "drawings/hellokitty.json" },
+    { name: "Cloud", thumb: "images/cloud.png", file: "drawings/cloud.json" },
+    { name: "Moon", thumb: "images/moon.png", file: "drawings/moon.json" },
+    { name: "Moon", thumb: "images/moon2.png", file: "drawings/moon2.json" },
+    { name: "Star", thumb: "images/star.png", file: "drawings/star.json" },
+    { name: "Whale", thumb: "images/whale.png", file: "drawings/whale.json" },
+    { name: "Dog", thumb: "images/dog.png", file: "drawings/dog.json" },
+    { name: "Candle", thumb: "images/candle.png", file: "drawings/candle.json" },
+    { name: "Franchektein", thumb: "images/franchektein.png", file: "drawings/franchektein.json" },
 ];
 
 
