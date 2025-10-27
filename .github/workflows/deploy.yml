@@ -7,6 +7,9 @@ on:
     paths:
       - 'web/**'  # Only trigger when web folder changes
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -22,7 +25,10 @@ jobs:
       - name: Copy web content to docs
         run: |
           cp -r web/* docs/
-          
+
+      - name: Create .nojekyll file
+        run: echo "" > docs/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
