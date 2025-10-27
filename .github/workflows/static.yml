@@ -2,13 +2,13 @@ name: Deploy static content to GitHub Pages
 
 on:
   push:
-    branches: ["main"]  # Déploie à chaque push sur main
-  workflow_dispatch:      # Permet aussi le déclenchement manuel
+    branches: ["main"] 
+  workflow_dispatch: 
 
 permissions:
-  contents: read          # Lecture du dépôt
-  pages: write            # Nécessaire pour déployer
-  id-token: write         # Auth GitHub Pages
+  contents: read 
+  pages: write
+  id-token: write
 
 concurrency:
   group: "pages"
@@ -35,8 +35,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'web'
-          
+          path: './web'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
