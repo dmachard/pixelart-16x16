@@ -98,6 +98,7 @@ Designed to work with the **Web Control App**, which lets you draw and upload pi
 ## Web Control App
 
 The Webapp uses the Web Bluetooth API to send data directly to your ESP32-C3.
+Available at https://dmachard.github.io/pixelart-16x16/
 
 <img src="imgs/webapp.png" width="500" title="alien">
 
