@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "width": 16,
+  "height": 16,
+  "brightness": 25,
+  "pixels":
+    [
+        [null, null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+        [null, null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+        [null, null,null,null,"#ff0000","#ff0000","#ff0000",null,null,null,"#ff0000","#ff0000","#ff0000",null,null,null],
+        [null, null,null,"#ff0000","#ff6b6b","#ff6b6b","#ff0000","#ff0000",null,"#ff0000","#ff0000","#ff6b6b","#ff6b6b","#ff0000",null,null],
+        [null, null,"#ff0000","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff0000","#ff0000","#ff0000","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff0000",null],
+        [null, null,"#ff0000","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff0000","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff0000",null],
+        [null, null,"#ff0000","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff0000",null],
+        [null, null,"#ff0000","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff0000",null],
+        [null, null,null,"#ff0000","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff0000",null,null],
+        [null, null,null,null,"#ff0000","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff0000",null,null,null],
+        [null, null,null,null,null,"#ff0000","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff6b6b","#ff0000",null,null,null,null],
+        [null, null,null,null,null,null,"#ff0000","#ff6b6b","#ff6b6b","#ff6b6b","#ff0000",null,null,null,null,null],
+        [null, null,null,null,null,null,null,"#ff0000","#ff6b6b","#ff0000",null,null,null,null,null,null],
+        [null, null,null,null,null,null,null,null,"#ff0000",null,null,null,null,null,null,null],
+        [null, null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+        [null, null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
+    ],
+  "timestamp": "2025-10-17T07:22:45.982Z",
+  "description": "LED Matrix 16x16 Drawing"
+}
