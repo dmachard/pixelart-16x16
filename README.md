@@ -72,6 +72,10 @@ The project includes both the **firmware** for the ESP32-C3 and a **web app** fo
 <td><img src="web/images/star.png" width="50" title="star"></td>
 <td><img src="web/images/whale.png" width="50" title="whale"></td>
 </tr>
+
+<tr>
+<td><img src="web/images/bot2.png" width="50" title="bot"></td>
+</tr>
 </table>
 
 ## Hardware setup
@@ -118,6 +122,8 @@ You can generate a PNG thumbnail from any exported JSON drawing with the provide
 
 ```
 cd web/
+python3 -m venv venv
 source venv/bin/activate
-python scripts/json_to_png.py drawings/example.json
+python -m pip install -r requirements.txt
+python scripts/json_to_png.py drawings/led-matrix.json
 ```

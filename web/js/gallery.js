@@ -22,6 +22,7 @@ const galleryData = [
     { name: "Fox", thumb: "images/fox2.png", file: "drawings/fox2.json" },
     { name: "Minion", thumb: "images/minion.png", file: "drawings/minion.json" },
     { name: "Bot", thumb: "images/bot.png", file: "drawings/bot.json" },
+    { name: "Bot", thumb: "images/bot2.png", file: "drawings/bot2.json" },
     { name: "I love you", thumb: "images/iloveyou.png", file: "drawings/iloveyou.json" },
     { name: "Home", thumb: "images/home.png", file: "drawings/home.json" },
     { name: "Ghost", thumb: "images/ghost1.png", file: "drawings/ghost1.json" },
