@@ -81,6 +81,8 @@ The project includes both the **firmware** for the ESP32-C3 and a **web app** fo
 - **Power Supply**:  5 V DC, ≥ 3 A recommended
 - **3D Printed Enclosure**: STL and FreeCAD files included in `/enclosure/`
 
+<img src="imgs/demo.png" title="demo">
+
 **Pinout:**
 | Signal | ESP32-C3 Pin | Notes |
 |--------|--------------|-------|
