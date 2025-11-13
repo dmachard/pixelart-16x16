@@ -52,7 +52,7 @@ const galleryData = [
     { name: "Counter", thumb: "images/counter.png", file: "drawings/counter.json" },
     { name: "Iron Man", thumb: "images/ironman.png", file: "drawings/ironman.json" },
     { name: "Rocket", thumb: "images/rocket.png", file: "drawings/rocket.json" },
-    { name: "Gomba", thumb: "images/gomba.png", file: "drawings/gomba.json" },
+    { name: "Goomba", thumb: "images/goomba.png", file: "drawings/goomba.json" },
     { name: "Clock", thumb: "images/clock.png", file: "drawings/clock.json" },
     { name: "Apple", thumb: "images/apple.png", file: "drawings/apple.json" },
     { name: "Playstation", thumb: "images/playstation.png", file: "drawings/playstation.json" },
