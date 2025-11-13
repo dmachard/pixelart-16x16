@@ -38,6 +38,7 @@ const galleryData = [
     { name: "Mario", thumb: "images/mario.png", file: "drawings/mario.json" },
     { name: "Question", thumb: "images/question.png", file: "drawings/question.json" },
     { name: "Skull", thumb: "images/skull.png", file: "drawings/skull.json" },
+    { name: "Skull", thumb: "images/skull2.png", file: "drawings/skull2.json" },
     { name: "Chicken", thumb: "images/chicken.png", file: "drawings/chicken.json" },
     { name: "Hello Kitty", thumb: "images/hellokitty.png", file: "drawings/hellokitty.json" },
     { name: "Cloud", thumb: "images/cloud.png", file: "drawings/cloud.json" },
@@ -48,6 +49,13 @@ const galleryData = [
     { name: "Dog", thumb: "images/dog.png", file: "drawings/dog.json" },
     { name: "Candle", thumb: "images/candle.png", file: "drawings/candle.json" },
     { name: "Franchektein", thumb: "images/franchektein.png", file: "drawings/franchektein.json" },
+    { name: "Counter", thumb: "images/counter.png", file: "drawings/counter.json" },
+    { name: "Iron Man", thumb: "images/ironman.png", file: "drawings/ironman.json" },
+    { name: "Rocket", thumb: "images/rocket.png", file: "drawings/rocket.json" },
+    { name: "Gomba", thumb: "images/gomba.png", file: "drawings/gomba.json" },
+    { name: "Clock", thumb: "images/clock.png", file: "drawings/clock.json" },
+    { name: "Apple", thumb: "images/apple.png", file: "drawings/apple.json" },
+    { name: "Playstation", thumb: "images/playstation.png", file: "drawings/playstation.json" },
 ];
 
 

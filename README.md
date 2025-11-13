@@ -75,6 +75,18 @@ The project includes both the **firmware** for the ESP32-C3 and a **web app** fo
 
 <tr>
 <td><img src="web/images/bot2.png" width="50" title="bot"></td>
+<td><img src="web/images/skull2.png" width="50" title="skull"></td>
+<td><img src="web/images/counter.png" width="50" title="counter"></td>
+<td><img src="web/images/ironman.png" width="50" title="ironman"></td>
+<td><img src="web/images/rocket.png" width="50" title="rocket"></td>
+<td><img src="web/images/gomba.png" width="50" title="gomba"></td>
+<td><img src="web/images/clock.png" width="50" title="clock"></td>
+<td><img src="web/images/apple.png" width="50" title="apple"></td>
+</tr>
+</table>
+
+<tr>
+<td><img src="web/images/playstation.png" width="50" title="playstation"></td>
 </tr>
 </table>
 
