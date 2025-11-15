@@ -86,6 +86,7 @@ The project includes both the **firmware** for the ESP32-C3 and a **web app** fo
 
 <tr>
 <td><img src="web/images/playstation.png" width="50" title="playstation"></td>
+<td><img src="web/images/dog2.png" width="50" title="dog"></td>
 </tr>
 </table>
 

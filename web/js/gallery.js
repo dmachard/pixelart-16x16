@@ -47,6 +47,7 @@ const galleryData = [
     { name: "Star", thumb: "images/star.png", file: "drawings/star.json" },
     { name: "Whale", thumb: "images/whale.png", file: "drawings/whale.json" },
     { name: "Dog", thumb: "images/dog.png", file: "drawings/dog.json" },
+    { name: "Dog", thumb: "images/dog2.png", file: "drawings/dog2.json" },
     { name: "Candle", thumb: "images/candle.png", file: "drawings/candle.json" },
     { name: "Franchektein", thumb: "images/franchektein.png", file: "drawings/franchektein.json" },
     { name: "Counter", thumb: "images/counter.png", file: "drawings/counter.json" },
