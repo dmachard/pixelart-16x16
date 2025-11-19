@@ -99,61 +99,6 @@ body {
     display: none;
 }
 
-/* === RESPONSIVE === */
-/* @media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-    
-    .connection-icon {
-        font-size: 3rem;
-    }
-    
-    .mode-icon {
-        font-size: 2.5rem;
-    }
-    
-    .mode-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-    
-    .controls-bar {
-        gap: 6px;
-        padding: 8px 10px;
-    }
-    
-    .slideshow-controls {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-    }
-    
-    .control-btn, .brightness-card {
-        padding: 14px 10px;
-    }
-    
-    .control-btn .icon, .brightness-card .icon {
-        font-size: 1.5rem;
-    }
-    
-    button {
-        font-size: 1rem;
-        padding: 6px 8px;
-        height: 32px;
-        min-width: 32px;
-    }
-    
-    .gallery-container {
-        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-        gap: 8px;
-        padding: 8px;
-    }
-    
-    .gallery-item {
-        padding: 3px;
-    }
-} */
-
 @media (max-width: 480px) {
     .slideshow-page {
         padding: 10px;

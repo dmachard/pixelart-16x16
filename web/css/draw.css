@@ -3,6 +3,11 @@
     padding: 10px;
 }
 
+.draw-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 input[type="file"] {
     display: none;
 }
