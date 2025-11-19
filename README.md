@@ -87,6 +87,8 @@ The project includes both the **firmware** for the ESP32-C3 and a **web app** fo
 <tr>
 <td><img src="web/images/playstation.png" width="50" title="playstation"></td>
 <td><img src="web/images/dog2.png" width="50" title="dog"></td>
+<td><img src="web/images/pikachu.png" width="50" title="pikachu"></td>
+<td><img src="web/images/stitch.png" width="50" title="stitch"></td>
 </tr>
 </table>
 
@@ -119,7 +121,9 @@ The Webapp uses the Web Bluetooth API to send data directly to your ESP32-C3.
 
 Available at https://dmachard.github.io/pixelart-16x16/
 
-<img src="imgs/webapp.png" width="500" title="alien">
+<img src="imgs/webapp_connect.png" width="500">
+<img src="imgs/webapp_mode.png" width="500">
+<img src="imgs/webapp_draw.png" width="500">
 
 This web interface lets you:
 - Draw and color pixel art with instant LED feedback

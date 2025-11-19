@@ -57,6 +57,8 @@ const galleryData = [
     { name: "Clock", thumb: "images/clock.png", file: "drawings/clock.json" },
     { name: "Apple", thumb: "images/apple.png", file: "drawings/apple.json" },
     { name: "Playstation", thumb: "images/playstation.png", file: "drawings/playstation.json" },
+    { name: "Pikachu", thumb: "images/pikachu.png", file: "drawings/pikachu.json" },
+    { name: "Stitch", thumb: "images/stitch.png", file: "drawings/stitch.json" },
 ];
 
 let selectedGalleryItems = new Set();
