@@ -1,0 +1,109 @@
+/* === GALERY PAGE === */
+.gallery-page {
+    padding: 20px;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-header h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gallery-header p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+}
+
+.slideshow-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.brightness-card {
+    background: linear-gradient(135deg, #2a2a3a, #1a1a2a);
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 90px;
+}
+
+.brightness-card .icon {
+    font-size: 1.8rem;
+    display: block;
+}
+
+.brightness-card select {
+    background: rgba(30, 30, 40, 0.9);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 12px;
+    padding: 12px;
+    background: rgba(30,30,40,0.5);
+    border-radius: 12px;
+    height: auto;
+    max-height: none; 
+    overflow-y: visible;
+}
+
+.gallery-item {
+    aspect-ratio: 1;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+    padding: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    image-rendering: pixelated;
+    border-radius: 6px;
+}
+
+.gallery-item.selected {
+    outline: 3px solid #4CAF50;
+    outline-offset: 2px;
+}

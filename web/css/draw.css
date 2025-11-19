@@ -1,0 +1,92 @@
+/* === DRAW PAGE === */
+.draw-page {
+    padding: 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.grid-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.grid {
+    width: min(90vw, calc(100vh - 300px));
+    aspect-ratio: 1 / 1;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    gap: 2px;
+    background: #333;
+    padding: 6px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.pixel {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border: 1px solid #444;
+    cursor: pointer;
+    transition: all 0.08s;
+    touch-action: none;
+}
+
+.pixel.on {
+    box-shadow: 0 0 8px currentColor;
+}
+
+.pixel:hover { 
+    border-color: #888; 
+}
+
+.palette-container {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 12px;
+    background: rgba(30,30,30,0.95);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.swatch {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.swatch.selected {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
+.swatch.eraser {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #ddd;
+    background: linear-gradient(45deg,#222,#111);
+}
+
+.color-picker {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.1);
+}

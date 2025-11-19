@@ -1,0 +1,41 @@
+/* === CONNECTION PAGE === */
+.connection-page {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.connection-container {
+    max-width: 400px;
+    background: linear-gradient(135deg, #2a2a3a, #1a1a2a);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.connection-container h1 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.connection-container p {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.connection-icon {
+    font-size: 4rem;
+    margin-bottom: 24px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}

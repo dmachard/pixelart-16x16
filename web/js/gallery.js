@@ -17,12 +17,12 @@ const galleryData = [
     { name: "Cat", thumb: "images/cat1.png", file: "drawings/cat1.json" },
     { name: "Cat", thumb: "images/cat2.png", file: "drawings/cat2.json" },
     { name: "Cat", thumb: "images/cat3.png", file: "drawings/cat3.json" },
+    { name: "Cat", thumb: "images/cat4.png", file: "drawings/cat4.json" },
     { name: "Buzz", thumb: "images/buzz.png", file: "drawings/buzz.json" },
     { name: "Fox", thumb: "images/fox1.png", file: "drawings/fox1.json" },
     { name: "Fox", thumb: "images/fox2.png", file: "drawings/fox2.json" },
     { name: "Minion", thumb: "images/minion.png", file: "drawings/minion.json" },
     { name: "Bot", thumb: "images/bot.png", file: "drawings/bot.json" },
-    { name: "Bot", thumb: "images/bot2.png", file: "drawings/bot2.json" },
     { name: "I love you", thumb: "images/iloveyou.png", file: "drawings/iloveyou.json" },
     { name: "Home", thumb: "images/home.png", file: "drawings/home.json" },
     { name: "Ghost", thumb: "images/ghost1.png", file: "drawings/ghost1.json" },
@@ -30,7 +30,7 @@ const galleryData = [
     { name: "Hand", thumb: "images/hand.png", file: "drawings/hand.json" },
     { name: "City", thumb: "images/city.png", file: "drawings/city.json" },
     { name: "Bear", thumb: "images/bear.png", file: "drawings/bear.json" },
-    { name: "Bear", thumb: "images/bear2.png", file: "drawings/bear2json" },
+    { name: "Bear", thumb: "images/bear2.png", file: "drawings/bear2.json" },
     { name: "Sonic", thumb: "images/sonic.png", file: "drawings/sonic.json" },
     { name: "Yoshi", thumb: "images/yoshi.png", file: "drawings/yoshi.json" },
     { name: "Pacman", thumb: "images/pacman.png", file: "drawings/pacman.json" },
@@ -38,7 +38,6 @@ const galleryData = [
     { name: "Mario", thumb: "images/mario.png", file: "drawings/mario.json" },
     { name: "Question", thumb: "images/question.png", file: "drawings/question.json" },
     { name: "Skull", thumb: "images/skull.png", file: "drawings/skull.json" },
-    { name: "Skull", thumb: "images/skull2.png", file: "drawings/skull2.json" },
     { name: "Chicken", thumb: "images/chicken.png", file: "drawings/chicken.json" },
     { name: "Hello Kitty", thumb: "images/hellokitty.png", file: "drawings/hellokitty.json" },
     { name: "Cloud", thumb: "images/cloud.png", file: "drawings/cloud.json" },
@@ -47,82 +46,155 @@ const galleryData = [
     { name: "Star", thumb: "images/star.png", file: "drawings/star.json" },
     { name: "Whale", thumb: "images/whale.png", file: "drawings/whale.json" },
     { name: "Dog", thumb: "images/dog.png", file: "drawings/dog.json" },
-    { name: "Dog", thumb: "images/dog2.png", file: "drawings/dog2.json" },
     { name: "Candle", thumb: "images/candle.png", file: "drawings/candle.json" },
     { name: "Franchektein", thumb: "images/franchektein.png", file: "drawings/franchektein.json" },
-    { name: "Counter", thumb: "images/counter.png", file: "drawings/counter.json" },
-    { name: "Iron Man", thumb: "images/ironman.png", file: "drawings/ironman.json" },
-    { name: "Rocket", thumb: "images/rocket.png", file: "drawings/rocket.json" },
-    { name: "Goomba", thumb: "images/goomba.png", file: "drawings/goomba.json" },
-    { name: "Clock", thumb: "images/clock.png", file: "drawings/clock.json" },
-    { name: "Apple", thumb: "images/apple.png", file: "drawings/apple.json" },
-    { name: "Playstation", thumb: "images/playstation.png", file: "drawings/playstation.json" },
 ];
 
+let selectedGalleryItems = new Set();
+
+function initSlideshowMode() {
+    renderGallery();
+    initSlideshowControls();
+}
 
 function renderGallery() {
     const galleryEl = document.getElementById('gallery');
     galleryEl.innerHTML = '';
-    galleryData.forEach(item => {
+    
+    galleryData.forEach((item, index) => {
         const div = document.createElement('div');
         div.className = 'gallery-item';
+        div.dataset.index = index;
         div.title = item.name;
-        div.innerHTML = `<img src="${item.thumb}" alt="${item.name}">`;
-        div.addEventListener('click', async () => {
-            try {
-                const res = await fetch(item.file);
-                if (!res.ok) throw new Error('file not found');
-                const json = await res.text();
-                loadDrawing(json);
-            } catch (err) {
-                showNotification('✗ Loading error ' + item.name, true);
+        
+        // Use thumbnail image instead of canvas
+        const img = document.createElement('img');
+        img.src = item.thumb;
+        img.alt = item.name;
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'contain';
+        img.style.imageRendering = 'pixelated';
+        
+        div.appendChild(img);
+        
+        div.addEventListener('click', () => {
+            if (selectedGalleryItems.has(index)) {
+                selectedGalleryItems.delete(index);
+                div.classList.remove('selected');
+            } else {
+                selectedGalleryItems.add(index);
+                div.classList.add('selected');
             }
+            updateSlideshowButtons();
         });
+        
         galleryEl.appendChild(div);
     });
 }
 
-renderGallery()
+function initSlideshowControls() {
+    document.getElementById('backFromSlideshow').addEventListener('click', () => {
+        selectedGalleryItems.clear();
+        showPage('modePage');
+    });
+    
+    document.getElementById('sendSlideshowBtn').addEventListener('click', sendSlideshow);
+    document.getElementById('sendSelectedBtn').addEventListener('click', sendSelectedDrawings);
+}
 
+function updateSlideshowButtons() {
+    const sendSelectedBtn = document.getElementById('sendSelectedBtn');
+    if (selectedGalleryItems.size > 0) {
+        sendSelectedBtn.classList.remove('hidden');
+        sendSelectedBtn.innerHTML = `<span class="icon">📤</span>
+            <span>Send ${selectedGalleryItems.size}</span>`;
+    } else {
+        sendSelectedBtn.classList.add('hidden');
+    }
+}
 
 async function sendSlideshow() {
-    const mode = 1;
-    const brightness = parseInt(document.getElementById('brightnessSelect').value);
-
-    if (!galleryData || galleryData.length === 0) return;
-
-    const shuffled = galleryData.slice().sort(() => Math.random() - 0.5);
-    const framesToSend = shuffled.slice(0, Math.min(10, shuffled.length));
-
-    const totalFrames = framesToSend.length;
-
-    for (let frameIndex = 0; frameIndex < totalFrames; frameIndex++) {
-        const item = framesToSend[frameIndex];
-        try {
-            const res = await fetch(item.file);
-            if (!res.ok) {
-                console.warn('File not found:', item.name);
-                continue;
+    try {
+        const brightness = parseInt(document.getElementById('brightnessSlideshowSelect').value);
+        
+        if (!galleryData || galleryData.length === 0) return;
+        
+        const shuffled = galleryData.slice().sort(() => Math.random() - 0.5);
+        const framesToSend = shuffled.slice(0, Math.min(10, shuffled.length));
+        const totalFrames = framesToSend.length;
+        
+        for (let frameIndex = 0; frameIndex < totalFrames; frameIndex++) {
+            const item = framesToSend[frameIndex];
+            try {
+                const res = await fetch(item.file);
+                if (!res.ok) {
+                    console.warn('File not found:', item.name);
+                    continue;
+                }
+                
+                const json = await res.json();
+                const { pixelsFlat, palette } = preparePixelsAndPalette(json.pixels);
+                
+                await window.ledmatrix.esp32.send({
+                    pixels: pixelsFlat,
+                    palette,
+                    brightness,
+                    mode: 1,
+                    frameIndex,
+                    totalFrames
+                });
+                
+                await new Promise(r => setTimeout(r, 50));
+            } catch (err) {
+                console.warn('Error slideshow:', item.name, err);
             }
-
-            const json = await res.json();
-            const { pixelsFlat, palette } = preparePixelsAndPalette(json.pixels);
-
-            await window.ledmatrix.esp32.send({
-                pixels: pixelsFlat,
-                palette,
-                brightness,
-                mode,
-                frameIndex,
-                totalFrames
-            });
-
-            await new Promise(r => setTimeout(r, 50)); // 100 ms entre frames
-
-        } catch (err) {
-            console.warn('Error slideshow:', item.name, err);
         }
+        
+        showNotification(`🎞️ Slideshow sent (${totalFrames} frames)`);
+    } catch (err) {
+        showNotification('✗ Error sending slideshow', true);
     }
+}
 
-    console.log(`🎞️ Slideshow sent with ${totalFrames} frames.`);
+async function sendSelectedDrawings() {
+    try {
+        const brightness = parseInt(document.getElementById('brightnessSlideshowSelect').value);
+        const selectedIndices = Array.from(selectedGalleryItems);
+        const totalFrames = selectedIndices.length;
+        
+        for (let frameIndex = 0; frameIndex < totalFrames; frameIndex++) {
+            const item = galleryData[selectedIndices[frameIndex]];
+            try {
+                const res = await fetch(item.file);
+                if (!res.ok) {
+                    console.warn('File not found:', item.name);
+                    continue;
+                }
+                
+                const json = await res.json();
+                const { pixelsFlat, palette } = preparePixelsAndPalette(json.pixels);
+                
+                await window.ledmatrix.esp32.send({
+                    pixels: pixelsFlat,
+                    palette,
+                    brightness,
+                    mode: 1,
+                    frameIndex,
+                    totalFrames
+                });
+                
+                await new Promise(r => setTimeout(r, 50));
+            } catch (err) {
+                console.warn('Error sending drawing:', item.name, err);
+            }
+        }
+        
+        showNotification(`✓ Sent ${totalFrames} drawings`);
+        selectedGalleryItems.clear();
+        document.querySelectorAll('.gallery-item').forEach(el => el.classList.remove('selected'));
+        updateSlideshowButtons();
+    } catch (err) {
+        showNotification('✗ Error sending drawings', true);
+    }
 }

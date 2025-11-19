@@ -3,64 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PixelArt 16×16</title>
-    <link rel="stylesheet" href="./css/style.css?v=33">
-    <meta name="theme-color" content="#1a1a1a">
-    <meta name="mobile-web-app-capable" content="yes">
+    <title>Open PixelArt</title>
+    <link rel="stylesheet" href="/css/style.css?v=66">
+    <link rel="stylesheet" href="/css/connection.css?v=1">
+    <link rel="stylesheet" href="/css/mode.css?v=1">
+    <link rel="stylesheet" href="/css/draw.css?v=4">
+    <link rel="stylesheet" href="/css/gallery.css?v=1">
 </head>
 <body>
-    <div class="controls-bar">
-        <button id="connectBtn" class="btn-connect" title="Connecter Bluetooth">📶</button>
-        <button id="clearBtn" class="btn-clear" title="Effacer tout">🗑️</button>
-        <button id="saveBtn" class="btn-save" title="Sauvegarder">💾</button>
-        <button id="loadBtn" class="btn-load" title="Charger un fichier">📁</button>
-        <input type="file" id="fileInput" accept=".json">
-        <button id="slideshowBtn" title="Slideshow">🎞️</button>
 
-
-        <div class="brightness-dropdown-control">
-            <span class="brightness-icon">💡</span>
-            <select id="brightnessSelect" title="Luminosité">
-                <option value="10">10</option>
-                <option value="20">20</option>
-                <option value="25" selected>25</option>
-                <option value="50">50</option>
-                <option value="75">75</option>
-                <option value="100">100</option>
-            </select>
+    <!-- PAGE 1: CONNECTION -->
+    <div id="connectionPage" class="page active connection-page">
+        <div class="connection-container">
+            <div class="connection-icon">📶</div>
+            <h1>Open PixelArt</h1>
+            <p>Connect to your LED matrix via Bluetooth to get started</p>
+            <button id="connectBtn" class="btn-send" style="width: 100%; height: 48px; font-size: 1.1rem;">
+                Connect Device
+            </button>
         </div>
     </div>
 
-    <div id="gallery" class="gallery-container"></div>
+    <!-- PAGE 2: MODE SELECTION -->
+    <div id="modePage" class="page mode-page">
+        <div class="mode-container">
+            <div class="mode-header">
+                <h1>Select Mode</h1>
+                <div class="device-name">Connected to: <span id="deviceName">Device</span></div>
+            </div>
+            
+            <div class="mode-grid">
+                <div class="mode-card" data-mode="draw">
+                    <span class="mode-icon">🎨</span>
+                    <div class="mode-name">Draw</div>
+                    <div class="mode-description">Create your own pixel art designs</div>
+                </div>
+                
+                <div class="mode-card" data-mode="gallery">
+                    <span class="mode-icon">🎞️</span>
+                    <div class="mode-name">Gallery</div>
+                    <div class="mode-description">Browse and send preset drawings</div>
+                </div>
+                
+                <div class="mode-card" data-mode="disconnect">
+                    <span class="mode-icon">🔌</span>
+                    <div class="mode-name">Disconnect</div>
+                    <div class="mode-description">Disconnect from device</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <div class="main-area">
+    <!-- PAGE: GALLERY MODE -->
+    <div id="galleryPage" class="page gallery-page">
+        <div class="gallery-header">
+            <h1>Gallery</h1>
+        </div>
+        
+        <div class="slideshow-controls">
+            <div class="control-btn" id="backFromSlideshow">
+                <span class="icon">←</span>
+                <span>Back</span>
+            </div>
+            
+            <div class="control-btn" id="sendSlideshowBtn">
+                <span class="icon">🎞️</span>
+                <span>Random <br />Slideshow</span>
+            </div>
+
+            <div class="brightness-card">
+                <span class="icon">💡</span>
+                <select id="brightnessSlideshowSelect">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="25" selected>25</option>
+                    <option value="50">50</option>
+                    <option value="75">75</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+            
+            <div class="control-btn hidden" id="sendSelectedBtn">
+                <span class="icon">📤</span>
+                <span>Send</span>
+            </div>
+
+        </div>
+        
+        <div id="gallery" class="gallery-container"></div>
+    </div>
+
+    <!-- PAGE: DRAW MODE -->
+    <div id="drawPage" class="page draw-page">
+        <div class="slideshow-header">
+            <h1>Draw</h1>
+        </div>
+        <div class="slideshow-controls">
+
+            <div class="control-btn" id="backFromDraw">
+                <span class="icon">←</span>
+                <span>Back</span>
+            </div>
+
+            <div class="control-btn" id="clearBtn">
+                <span class="icon">🗑️</span>
+                <span>Clear</span>
+            </div>
+
+            <div class="control-btn" id="saveBtn">
+                <span class="icon">💾</span>
+                <span>Save</span>
+            </div>
+
+            <div class="control-btn" id="loadBtn">
+                <span class="icon">📁</span>
+                <span>Load</span>
+            </div>
+
+            <div class="brightness-card">
+                <span class="icon">💡</span>
+                <select id="brightnessSelect">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="25" selected>25</option>
+                    <option value="50">50</option>
+                    <option value="75">75</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+
+            <input type="file" id="fileInput" accept=".json" style="display:none">
+        </div>
+
         <div class="grid-wrapper">
-            <div id="grid" class="grid" role="grid" aria-label="Matrice LED 16 par 16"></div>
+            <div id="grid" class="grid"></div>
         </div>
-
-    <div id="palette" class="palette-container" aria-label="Palette de couleurs">
-        <div id="eraser" class="swatch eraser" title="Gomme">✕</div>
-        <div class="swatch" data-color="#ffffff" style="background:#ffffff"></div>
-        <div class="swatch" data-color="#ff0000" style="background:#ff0000"></div>
-        <div class="swatch" data-color="#00ff00" style="background:#00ff00"></div>
-        <div class="swatch" data-color="#0000ff" style="background:#0000ff"></div>
-        <div class="swatch" data-color="#ffff00" style="background:#ffff00"></div>
-        <div class="swatch" data-color="#00ffff" style="background:#00ffff"></div>
-        <div class="swatch" data-color="#ffa500" style="background:#ffa500"></div>
-        <div class="swatch" data-color="#ffc0cb" style="background:#ffc0cb"></div>
-        <div class="swatch" data-color="#ff1493" style="background:#ff1493"></div>
-        <div class="swatch" data-color="#1e90ff" style="background:#1e90ff"></div>
-        <div class="swatch" data-color="#8a2be2" style="background:#8a2be2"></div>
-        <div class="swatch" data-color="#adff2f" style="background:#adff2f"></div>
-        <div class="swatch" data-color="#8b4513" style="background:#8b4513"></div>
-        <div class="swatch" data-color="#808080" style="background:#808080"></div>
-        <input id="customColor" class="color-picker" type="color" value="#ffffff" title="Couleur personnalisée">
+        
+        <div id="palette" class="palette-container">
+            <div id="eraser" class="swatch eraser" title="Eraser">✕</div>
+            <div class="swatch" data-color="#ffffff" style="background:#ffffff"></div>
+            <div class="swatch" data-color="#ff0000" style="background:#ff0000"></div>
+            <div class="swatch" data-color="#00ff00" style="background:#00ff00"></div>
+            <div class="swatch" data-color="#0000ff" style="background:#0000ff"></div>
+            <div class="swatch" data-color="#ffff00" style="background:#ffff00"></div>
+            <div class="swatch" data-color="#00ffff" style="background:#00ffff"></div>
+            <div class="swatch" data-color="#ffa500" style="background:#ffa500"></div>
+            <div class="swatch" data-color="#ffc0cb" style="background:#ffc0cb"></div>
+            <div class="swatch" data-color="#ff1493" style="background:#ff1493"></div>
+            <div class="swatch" data-color="#1e90ff" style="background:#1e90ff"></div>
+            <div class="swatch" data-color="#8a2be2" style="background:#8a2be2"></div>
+            <div class="swatch" data-color="#adff2f" style="background:#adff2f"></div>
+            <div class="swatch" data-color="#8b4513" style="background:#8b4513"></div>
+            <div class="swatch" data-color="#808080" style="background:#808080"></div>
+            <input id="customColor" class="color-picker" type="color" value="#ffffff" title="Custom">
         </div>
     </div>
 
-    <script src="./js/ble.js?v=2" defer></script>
-    <script src="./js/esp32.js?v=8" defer></script>
-    <script src="./js/gallery.js?v=17"></script>
-    <script src="./js/app.js?v=35"></script>
+    <script src="/js/ble.js?v=2" defer></script>
+    <script src="/js/esp32.js?v=8" defer></script>
+    <script src="/js/draw.js?v=1"></script>
+    <script src="/js/gallery.js?v=15"></script>
+    <script src="/js/app.js?v=62"></script>
 </body>
 </html>

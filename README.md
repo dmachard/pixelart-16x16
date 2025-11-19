@@ -1,4 +1,4 @@
-# pixelart-16x16
+# Open PixelArt
 
 Paint pixels in your browser and watch them **instantly** light up on your 
 physical LED matrix using **Bluetooth**.  

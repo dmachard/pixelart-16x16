@@ -1,0 +1,88 @@
+/* === MODE SELECTION PAGE === */
+.mode-page {
+    justify-content: center;
+    align-items: center;
+}
+
+.mode-container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.mode-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mode-header h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.device-name {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+}
+
+.mode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.mode-card {
+    background: linear-gradient(135deg, #2a2a3a, #1a1a2a);
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mode-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.05), transparent);
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+
+.mode-card:hover::before {
+    left: 100%;
+}
+
+.mode-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(102, 126, 234, 0.5);
+    box-shadow: 0 12px 32px rgba(102, 126, 234, 0.3);
+}
+
+.mode-card:active {
+    transform: translateY(-4px);
+}
+
+.mode-icon {
+    font-size: 3rem;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.mode-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.mode-description {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.4;
+}
